@@ -6,22 +6,18 @@ using Prism.Events;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
-using Prism.Unity;
 
 namespace PatientSignatureTerminal
 {
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
-    public partial class App : PrismApplication
+    public partial class App
     {
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.Register(typeof(IEventAggregator), typeof(EventAggregator));
             containerRegistry.Register<IRegionManager, RegionManager>();
-            //containerRegistry.RegisterInstance(_logManager);
-            containerRegistry.RegisterSingleton<IViewModelAsyncComponent, ViewModelAsyncComponent>();
-
         }
 
         protected override Window CreateShell()
@@ -106,14 +102,6 @@ namespace PatientSignatureTerminal
         {
             return new AllActiveRegion();
         }
-    }
-
-    public class ViewModelAsyncComponent : IViewModelAsyncComponent
-    {
-    }
-
-    public interface IViewModelAsyncComponent
-    {
     }
 
     public class ServiceModule : IModule
