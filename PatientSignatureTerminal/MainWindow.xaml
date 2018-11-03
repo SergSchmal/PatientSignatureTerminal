@@ -8,6 +8,7 @@
         mc:Ignorable="d"
         d:DesignWidth="1920"
         d:DesignHeight="1080"
+        regions:ViewModelLocator.AutoWireViewModel="True"
         FontFamily="{StaticResource FontLato}">
     <Grid>
         <Grid.RowDefinitions>

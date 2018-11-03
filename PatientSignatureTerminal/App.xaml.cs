@@ -28,7 +28,7 @@ namespace PatientSignatureTerminal
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
             base.ConfigureModuleCatalog(moduleCatalog);
-            var serviceModuleType = typeof(ServiceModule);
+            var serviceModuleType = typeof(PatientSignatureTerminalModule);
             moduleCatalog.AddModule(
                 new ModuleInfo
                 {
@@ -101,17 +101,6 @@ namespace PatientSignatureTerminal
         protected override IRegion CreateRegion()
         {
             return new AllActiveRegion();
-        }
-    }
-
-    public class ServiceModule : IModule
-    {
-        public void RegisterTypes(IContainerRegistry containerRegistry)
-        {
-        }
-
-        public void OnInitialized(IContainerProvider containerProvider)
-        {
         }
     }
 }

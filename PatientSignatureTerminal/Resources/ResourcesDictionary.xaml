@@ -1,6 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Color x:Key="ControlBorderColor">#FFA0A0A0</Color>
+ <Color x:Key="ControlBorderColor">#FFA0A0A0</Color>
 
     <SolidColorBrush x:Key="medXMainBackground">#FF191919</SolidColorBrush>
     <SolidColorBrush x:Key="medXBackgroundControl">#FF3C3C3C</SolidColorBrush>

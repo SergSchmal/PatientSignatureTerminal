@@ -80,6 +80,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Helpers\EWizardSteps.cs" />
+    <Compile Include="MainWindowViewModel.cs" />
+    <Compile Include="PatientSignatureTerminalModule.cs" />
+    <Compile Include="ViewModel\NewViewModel.cs" />
+    <Compile Include="Views\ContinueMessageView.xaml.cs">
+      <DependentUpon>ContinueMessageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\ContinueMessageViewModel.cs" />
+    <Compile Include="Views\NewView.xaml.cs">
+      <DependentUpon>NewView.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -97,6 +108,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Resources\ResourcesDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ContinueMessageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NewView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
