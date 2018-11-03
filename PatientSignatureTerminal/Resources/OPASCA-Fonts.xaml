@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    mc:Ignorable="d"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008">
+
+    <FontFamily x:Key="FontLato">file:///C:/ProgramData/OPASCA GmbH/Fonts/#Lato</FontFamily>
+    <FontFamily x:Key="FontLatoLight">file:///C:/ProgramData/OPASCA GmbH/Fonts/#Lato Light</FontFamily>
+    <FontFamily x:Key="FontSourceSansPro">file:///C:/ProgramData/OPASCA GmbH/Fonts/#Source Sans Pro</FontFamily>
+    <FontFamily x:Key="FontSourceSansProLight">file:///C:/ProgramData/OPASCA GmbH/Fonts/#Source Sans Pro Light</FontFamily>
+
+</ResourceDictionary>
