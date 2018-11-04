@@ -1,5 +1,4 @@
 ﻿using PatientSignatureTerminal.Helpers;
-using PatientSignatureTerminal.ViewModel;
 using PatientSignatureTerminal.Views;
 using Prism.Ioc;
 using Prism.Modularity;
@@ -9,17 +8,23 @@ namespace PatientSignatureTerminal
 {
     public class PatientSignatureTerminalModule : IModule
     {
-        public void OnInitialized(IContainerProvider containerProvider)
+        private readonly IRegionManager _regionManager;
+
+        public PatientSignatureTerminalModule(IRegionManager regionManager)
         {
-            var regionManager = containerProvider.Resolve<IRegionManager>();
-            regionManager.RegisterViewWithRegion("MainRegion", typeof(ContinueMessageView));
+            _regionManager = regionManager;
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterSingleton<ContinueMessageViewModel>();
-            containerRegistry.RegisterForNavigation<NewView>();
+            containerRegistry.RegisterForNavigation<ContinueMessage>();
+            containerRegistry.RegisterForNavigation<ViewB>();
+            containerRegistry.RegisterForNavigation<ViewA>();
         }
 
+        public void OnInitialized(IContainerProvider containerProvider)
+        {
+            _regionManager.RequestNavigate(RegionNames.MainRegion, typeof(ContinueMessage).Name, new NavigationParameters{{"step", EWizardSteps.Start}});
+        }
     }
 }

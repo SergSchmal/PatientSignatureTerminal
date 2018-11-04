@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace PatientSignatureTerminal.Views
 {
     /// <summary>
-    /// Interaction logic for NewView.xaml
+    /// Interaction logic for ViewA.xaml
     /// </summary>
-    public partial class NewView : UserControl
+    public partial class ViewA : UserControl
     {
-        public NewView()
+        public ViewA()
         {
             InitializeComponent();
         }

@@ -1,6 +1,4 @@
 ﻿using System.Windows;
-using PatientSignatureTerminal.Helpers;
-using Prism.Regions;
 
 namespace PatientSignatureTerminal
 {
@@ -9,13 +7,10 @@ namespace PatientSignatureTerminal
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow(IRegionManager regionManager)
+
+        public MainWindow()
         {
             InitializeComponent();
-
-            var navigationParameters = new NavigationParameters { { "step", EWizardSteps.Start } };
-            regionManager.RequestNavigate("MainRegion", "ContinueMessageView", navigationParameters);
-
         }
     }
 }
